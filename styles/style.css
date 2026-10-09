@@ -12,7 +12,7 @@
   color: var(--accent-color);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: var(--grid-gap-page);
 }
 
 .panel {
@@ -21,7 +21,7 @@
   min-block-size: 668px;
   display: grid;
   grid-template-columns: 1fr;
-  
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
 }
 
@@ -30,13 +30,13 @@
 }
 
 .decorated-zone {
-  padding: 20px 10px;
+  padding: var(--padding-decorate-zone);
 }
 
 .decorated-zone::after {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: var(--separator-decor);
+  top: var(--separator-decor);
   content: '';
   width: 25px;
   height: 25px;
@@ -47,8 +47,8 @@
 
 .decorated-zone::before {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: var(--separator-decor);
+  bottom: var(--separator-decor);
   content: '';
   width: 25px;
   height: 25px;
@@ -60,8 +60,8 @@
 .header__decor {
   position: absolute;
   display: flex;
-  right: 20px;
-  top: 10px;
+  right: var(--separator-decor-circle);
+  top: var(--separator-decor);
   gap: 10px;
   align-items: center;
   font-family: inherit;
@@ -92,7 +92,7 @@
 }
 
 .header__theme-menu-button {
-  padding: 0 12px 0 12px;
+  padding: 0 12px;
   font-size: 18px;
   text-transform: lowercase;
   background-color: transparent;
@@ -145,22 +145,26 @@
 }
 
 .main {
-  padding: 0 10px;
+  padding: var(--padding-main);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;
+  gap: var(--grid-gap-main);
 }
 
 .section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: var(--grid-gap-section);
 }
 
 .content-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: var(--grid-gap-content-list);
+}
+
+.gallery .content-list.sub-list {
+  --grid-gap-content-list: 10px;
 }
 
 .section__title {
@@ -172,7 +176,7 @@
 .content-list__item {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: var(--grid-gap-content-list-item);
 }
 
 .content-list__title {
@@ -224,11 +228,12 @@
 }
 
 .footer {
-  position: relative;
-  block-size: 100vh;
-  min-block-size: 668px;
+  justify-content: center;
 }
 
 .footer__title {
+  grid-row: 2;
   text-shadow: 2px 2px 0 var(--accent-color);
+  justify-self: center;
 }
+

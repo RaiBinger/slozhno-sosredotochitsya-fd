@@ -12,4 +12,13 @@
   --accent-title: rgba(0, 0, 40, 1);
   --accent-text: rgba(241, 178, 206, 1);
   --accent-button-hover: rgba(255, 0, 112, 0.4);
+  --separator-decor: 10px;
+  --separator-decor-circle: 20px;
+  --grid-gap-page: 40px;
+  --padding-decorate-zone: 20px 10px;
+  --padding-main: 0 10px;
+  --grid-gap-main: 50px;
+  --grid-gap-section: 20px;
+  --grid-gap-content-list: 20px;
+  --grid-gap-content-list-item: 10px;
 }
