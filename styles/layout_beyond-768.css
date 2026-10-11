@@ -1,0 +1,87 @@
+
+
+@media (768px <= width) {
+
+  :root {
+    --header-padding: 105px 20px;
+    --main-padding: 0 20px;
+    --decor-offset: 20px;
+    --decor-offset-extender: 30px;
+    --page-grid-gap: 60px;
+    --main-grid-gap: 80px;
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+   .header__theme-menu {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .header__title {
+    margin-left: -20px;
+    grid-column: span 2;
+  }
+
+  .header__description {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .why,
+  .how {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .what .section__title {
+    inline-size: min-content;
+  }
+
+  .gallery .content-list {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, min-content);
+  }
+
+  .gallery__header {
+    grid-row: 1;
+    grid-column: span 3;
+  }
+
+  .picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .sunset {
+    grid-row: 2;
+    grid-column: span 2;
+  }
+
+  .ice-cream {
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+
+  .tape {
+    grid-column: 1;
+    grid-row: 3 / -1;
+  }
+
+  .books {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .street {
+    grid-column: 2 / -1;
+    grid-row: 4;
+  }
+
+}
+
