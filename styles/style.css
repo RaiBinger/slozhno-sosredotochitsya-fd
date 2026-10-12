@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'IBM Plex mono', serif, sans-serif;
-  color: var(--accent-color);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, max-content);
@@ -19,7 +18,6 @@
 .header {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  align-items: center;
   padding: var(--header-padding);
 }
 
@@ -28,6 +26,8 @@
   position: relative;
   block-size: 100vh;
   min-block-size: 375px;
+  align-items: center;
+  justify-content: center;
 }
 
 .decorated-zone::after {
@@ -37,6 +37,7 @@
   content: '';
   width: 25px;
   height: 25px;
+  color: var(--accent-decor-color);
   background: transparent;
   border-top: 1px solid currentColor;
   border-right: 1px solid currentColor;
@@ -49,6 +50,7 @@
   content: '';
   width: 25px;
   height: 25px;
+  color: var(--accent-decor-color);
   background: transparent;
   border-bottom: 1px solid currentColor;
   border-left: 1px solid currentColor;
@@ -56,7 +58,7 @@
 
 .header__decor {
   position: absolute;
-  display: flex;
+  display: var(--header-decor-display);
   right: var(--decor-offset-extender);
   top: var(--decor-offset);
   gap: 10px;
@@ -66,6 +68,7 @@
   font-size: 18px;
   line-height: 1.388;
   text-transform: uppercase;
+  color: var(--accent-decor-color);
 }
 
 .header__decor::after {
@@ -95,6 +98,7 @@
   background-color: transparent;
   cursor: pointer;
   border: 1px solid transparent;
+  color: var(--accent-button-text-color);
 }
 
 .header__theme-menu-button:focus {
@@ -156,6 +160,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
+  color: var(--accent-section-title-color);
 }
 
 .content-list {
@@ -219,13 +224,14 @@
 
 .picture {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
 .footer__title {
-  grid-row: 2;
   text-shadow: 2px 2px 0 var(--accent-color);
-  justify-self: center;
+  /* justify-self: center;
+  align-self: center; */
 }
 

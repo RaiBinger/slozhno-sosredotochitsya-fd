@@ -24,14 +24,8 @@
     margin-bottom: 55px;
   }
 
-  .what {
+  .section:not(.gallery) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content 1fr;
-  }
-
-  .what .section__title {
-    grid-column: 1;
-    width: 100%;
   }
 
   .what .content-list {
@@ -39,6 +33,11 @@
     grid-column: span 3;
     grid-template-columns: subgrid;
     align-items: start;
+  }
+
+  .why .content-list,
+  .how .content-list {
+    grid-column: span 2;
   }
 }
 

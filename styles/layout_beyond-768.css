@@ -15,7 +15,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-   .header__theme-menu {
+  .header__theme-menu {
     grid-column: 2;
     align-self: center;
   }
@@ -30,14 +30,13 @@
     align-self: center;
   }
 
-  .why,
-  .how {
+  .section:not(.gallery) {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  .what .section__title {
-    inline-size: min-content;
+  .what .content-list {
+    grid-column: span 2;
   }
 
   .gallery .content-list {
@@ -49,13 +48,6 @@
   .gallery__header {
     grid-row: 1;
     grid-column: span 3;
-  }
-
-  .picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
   }
 
   .sunset {
