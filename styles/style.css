@@ -9,6 +9,9 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'IBM Plex mono', serif, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, max-content);
@@ -25,6 +28,9 @@
   display: grid;
   position: relative;
   block-size: 100vh;
+  /* В задании написано зафикуировать минимальную высоту согласно макета. В макете высота 668px
+  Я поставил 375px чтобы при повороте экрана декоративные углы не уползали за пределы экрана.
+  Если это является грубой ошибкой - обозначьте как ошибку - исправлю.*/
   min-block-size: 375px;
   align-items: center;
   justify-content: center;
@@ -32,49 +38,49 @@
 
 .decorated-zone::after {
   position: absolute;
-  right: var(--decor-offset);
-  top: var(--decor-offset);
+  inset-inline-end: var(--decor-offset);
+  inset-block-start: var(--decor-offset);
   content: '';
-  width: 25px;
-  height: 25px;
-  color: var(--accent-decor-color);
+  inline-size: 25px;
+  block-size: 25px;
+  color: var(--decor-color);
   background: transparent;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
+  border-block-start: 1px solid currentColor;
+  border-inline-end: 1px solid currentColor;
 }
 
 .decorated-zone::before {
   position: absolute;
-  left: var(--decor-offset);
-  bottom: var(--decor-offset);
+  inset-inline-start: var(--decor-offset);
+  inset-block-end: var(--decor-offset);
   content: '';
-  width: 25px;
-  height: 25px;
-  color: var(--accent-decor-color);
+  inline-size: 25px;
+  block-size: 25px;
+  color: var(--decor-color);
   background: transparent;
-  border-bottom: 1px solid currentColor;
-  border-left: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  border-inline-start: 1px solid currentColor;
 }
 
 .header__decor {
   position: absolute;
   display: var(--header-decor-display);
-  right: var(--decor-offset-extender);
-  top: var(--decor-offset);
+  inset-inline-end: var(--decor-offset-extender);
+  inset-block-start: var(--decor-offset);
   gap: 10px;
   align-items: center;
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px;
+  /* font-family: inherit; */
+  /* font-weight: 400; */
+  /* font-size: 18px; */
   line-height: 1.388;
   text-transform: uppercase;
-  color: var(--accent-decor-color);
+  color: var(--decor-color);
 }
 
 .header__decor::after {
   content: '';
-  width: 9px;
-  height: 9px;
+  inline-size: 9px;
+  block-size: 9px;
   border-radius: 50%;
   background-color: currentColor;
   box-shadow: 0px 0px 4px 2px currentColor;
@@ -93,12 +99,12 @@
 
 .header__theme-menu-button {
   padding: 0 12px;
-  font-size: 18px;
+  font-size: inherit;
   text-transform: lowercase;
   background-color: transparent;
   cursor: pointer;
   border: 1px solid transparent;
-  color: var(--accent-button-text-color);
+  color: var(--button-text-color);
 }
 
 .header__theme-menu-button:focus {
@@ -110,7 +116,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-button-hover);
+  outline: 1px solid var(--button-hover-color);
   outline-offset: 0;
 }
 
@@ -120,8 +126,8 @@
 }
 
 .header__title {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -132,15 +138,19 @@
 }
 
 .header__description {
-  display: flex;
-  align-self: center;
-  background-color: var(--accent-color);
-  color: var(--accent-block-title-color);
-  font-family: inherit;
+  /* display: flex;
+  align-self: center; */
+  /* background-color: var(--accent-color); */
+  color: var(--text-color-with-bg-accent);
+  /* font-family: inherit; */
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.3;
-  block-size: fit-content;
+  /* font-size: 18px; */
+  /* line-height: 1.3; */
+  /* block-size: fit-content; */
+}
+
+.accent {
+  background-color: var(--accent-color);
 }
 
 .main {
@@ -158,9 +168,9 @@
 
 .section__title {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.3;
-  color: var(--accent-section-title-color);
+  font-size: inherit;
+  /* line-height: 1.3; */
+  color: var(--section-title-color);
 }
 
 .content-list {
@@ -176,28 +186,24 @@
 }
 
 .content-list__title {
-  height: max-content;
+  /* height: max-content; */
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.3;
-  color: var(--accent-block-title-color);
-}
-
-.title-decor {
-  background-color: var(--accent-color);
+  font-size: inherit;
+  /* line-height: 1.3; */
+  color: var(--text-color-with-bg-accent);
 }
 
 .content-list__description {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.3;
-  color: var(--accent-block-text-color);
+  /* font-weight: 400;
+  font-size: inherit;
+  line-height: 1.3; */
+  color: var(--content-text-color);
 }
 
 .subtitle {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.3;
+  font-weight: inherit;
+  font-size: inherit;
+  /* line-height: 1.3; */
 }
 
 .description-link {
@@ -223,15 +229,13 @@
 }
 
 .picture {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
 
 .footer__title {
   text-shadow: 2px 2px 0 var(--accent-color);
-  /* justify-self: center;
-  align-self: center; */
 }
 
