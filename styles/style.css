@@ -124,7 +124,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom-color: currentColor;
+  border-block-end-color: currentColor;
 }
 
 .header__theme-menu-button:hover {

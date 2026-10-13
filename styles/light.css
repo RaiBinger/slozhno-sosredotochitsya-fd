@@ -11,15 +11,15 @@
   */
 
   --bg-image: url(../images/cover-image-light.png);
-  --bg-color: rgba(255, 241, 247, 1);
-  --title-color: rgba(255, 194, 230, 1);
-  --accent-color: rgba(255, 141, 203, 1);
-  --section-title-color: rgba(53, 52, 48, 1);
-  --text-color-with-bg-accent: rgba(53, 52, 48, 1);
-  --content-text-color: rgba(53, 52, 48, 1);
-  --button-text-color: rgba(53, 52, 48, 1);
-  --button-hover-color: rgba(50, 49, 45, 0.4);
-  --decor-color: rgba(53, 52, 48, 1);
+  --bg-color: rgb(255 241 247 / 1);
+  --title-color: rgb(255 194 230 / 1);
+  --accent-color: rgb(255 141 203 / 1);
+  --section-title-color: rgb(53 52 48 / 1);
+  --text-color-with-bg-accent: rgb(53 52 48 / 1);
+  --content-text-color: rgb(53 52 48 / 1);
+  --button-text-color: rgb(53 52 48 / 1);
+  --button-hover-color: rgb(50 49 45 / 0.4);
+  --decor-color: rgb(53 52 48 / 1);
 
   --header-decor-display: none;
 }
@@ -28,15 +28,15 @@
 
   :root {
     --bg-image: url(../images/cover-image-light.png);
-    --bg-color: rgba(255, 241, 247, 1);
-    --title-color: rgba(255, 194, 230, 1);
-    --accent-color: rgba(255, 141, 203, 1);
-    --section-title-color: rgba(53, 52, 48, 1);
-    --text-color-with-bg-accent: rgba(53, 52, 48, 1);
-    --content-text-color: rgba(53, 52, 48, 1);
-    --button-text-color: rgba(53, 52, 48, 1);
-    --button-hover-color: rgba(50, 49, 45, 0.4);
-    --decor-color: rgba(53, 52, 48, 1);
+    --bg-color: rgb(255 241 247 / 1);
+    --title-color: rgb(255 194 230 / 1);
+    --accent-color: rgb(255 141 203 / 1);
+    --section-title-color: rgb(53 52 48 / 1);
+    --text-color-with-bg-accent: rgb(53 52 48 / 1);
+    --content-text-color: rgb(53 52 48 / 1);
+    --button-text-color: rgb(53 52 48 / 1);
+    --button-hover-color: rgb(50 49 45 / 0.4);
+    --decor-color: rgb(53 52 48 / 1);
 
     --header-decor-display: none;
   }
