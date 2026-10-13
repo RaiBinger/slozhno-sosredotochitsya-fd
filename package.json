@@ -1,0 +1,26 @@
+{
+  "name": "slozhno-sosredotochitsya-fd",
+  "version": "1.0.0",
+  "description": "https://github.com/RaiBinger/slozhno-sosredotochitsya-fd",
+  "homepage": "https://github.com/RaiBinger/slozhno-sosredotochitsya-fd#readme",
+  "bugs": {
+    "url": "https://github.com/RaiBinger/slozhno-sosredotochitsya-fd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaiBinger/slozhno-sosredotochitsya-fd.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Hello World!' && exit 1",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint \"**/*.css\"",
+    "lintfix": "stylelint \"**/*.css\" --fix"
+  },
+  "dependencies": {
+    "prettier": "^3.9.10",
+    "stylelint": "^17.16.0"
+  }
+}

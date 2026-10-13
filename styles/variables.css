@@ -2,7 +2,25 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
 :root {
+
+  /* Начало списка переменных для стилей тёмной цветовой схемы */
+
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: rgba(0, 0, 40, 1);
+  --title-color: rgba(219, 0, 255, 1);
+  --accent-color: rgba(255, 0, 112, 1);
+  --section-title-color: rgba(255, 0, 112, 1);
+  --text-color-with-bg-accent: rgba(0, 0, 40, 1);
+  --content-text-color: rgba(241, 178, 206, 1);
+  --button-text-color: rgba(255, 0, 112, 1);
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --decor-color: rgba(255, 0, 112, 1);
+
+  /* Начало списка переменных для стилей геометрии лайаута */
+
+  --font-size-default: 18px;
   --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --header-padding: 20px 10px;
   --main-padding: 0 10px;
