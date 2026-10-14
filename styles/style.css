@@ -43,7 +43,7 @@
   align-items: center;
   block-size: 100vh;
 
-  /* В задании написано зафикуировать минимальную высоту согласно макета. В макете высота 668px
+  /* В задании написано зафиксировать минимальную высоту согласно макета. В макете высота 668px
   Я поставил 375px чтобы при повороте экрана декоративные углы не уползали за пределы экрана.
   Если это является грубой ошибкой - обозначьте как ошибку - исправлю.*/
 
@@ -111,9 +111,12 @@
 }
 
 .header__theme-menu-button {
+  appearance: none;
+  -webkit-appearance: none;
   border: 1px solid transparent;
   padding: 0 12px 1px;
   color: var(--button-text-color);
+  font-family: inherit;
   font-size: inherit;
   text-transform: lowercase;
   background-color: transparent;
@@ -220,7 +223,7 @@
 .picture {
   object-fit: cover;
   object-position: center;
-  inline-size: 100%;
+  max-inline-size: 100%;
   block-size: 100%;
 }
 
