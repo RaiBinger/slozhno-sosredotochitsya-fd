@@ -28,5 +28,31 @@
   --decor-offset-extender: 20px;
   --page-grid-gap: 40px;
   --main-grid-gap: 50px;
+  --section-grid-gap: 20px;
   --header-decor-display: flex;
 }
+
+/* Переопределение переменных геометрии для соответствующих брейкпоинтов */
+
+@media (768px <= width) {
+
+  :root {
+    --header-padding: 105px 20px;
+    --main-padding: 0 20px;
+    --decor-offset: 20px;
+    --decor-offset-extender: 30px;
+    --page-grid-gap: 60px;
+    --main-grid-gap: 80px;
+  }
+}
+
+@media (1024px <= width) {
+
+  :root {
+    --header-padding: 20px;
+    --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+
+

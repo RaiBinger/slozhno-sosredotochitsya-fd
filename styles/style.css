@@ -19,17 +19,6 @@
   background-attachment: fixed;
 }
 
-.visually-hidden {
-  position: absolute; /* элемент вырывают из потока */
-  width: 1px; /* делают элемент очень маленьким, но таким, чтобы не пропал совсем */
-  height: 1px;
-  margin: -1px; /* элемент убирают из поля зрения, сдвинув на размер самого себя */
-  border: 0; /* убирают границу, она тоже может быть у каких-то элементов */
-  padding: 0; /* обнуляют отступы, они есть у некоторых элементов по умолчанию */
-  overflow: hidden; /* на всякий случай скрывают видимое за пределами блока */
-  clip: rect(0 0 0 0); /* это свойство обрезает видимую область до нулевого значения */
-}
-
 .header {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -42,12 +31,7 @@
   justify-content: center;
   align-items: center;
   block-size: 100vh;
-
-  /* В задании написано зафиксировать минимальную высоту согласно макета. В макете высота 668px
-  Я поставил 375px чтобы при повороте экрана декоративные углы не уползали за пределы экрана.
-  Если это является грубой ошибкой - обозначьте как ошибку - исправлю.*/
-
-  min-block-size: 375px;
+  min-block-size: 668px;
 }
 
 .decorated-zone::after {
@@ -172,7 +156,7 @@
 .section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: var(--section-grid-gap);
 }
 
 .section__title {
@@ -203,6 +187,9 @@
 }
 
 .description-link {
+  display: inline-block;
+  line-height: 1;
+  border-block-end: 1px solid transparent;
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--accent-color);
 }
@@ -217,7 +204,12 @@
 }
 
 .description-link:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid currentColor;
+}
+
+.gallery {
+  --section-grid-gap: 10px;
+  gap: var(--section-grid-gap);
 }
 
 .gallery .content-list {
@@ -227,7 +219,7 @@
 .picture {
   object-fit: cover;
   object-position: center;
-  max-inline-size: 100%;
+  inline-size: 100%;
   block-size: 100%;
 }
 
