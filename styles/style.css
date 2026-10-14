@@ -59,8 +59,8 @@
   background: transparent;
   inset-inline-end: var(--decor-offset);
   inset-block-start: var(--decor-offset);
-  inline-size: 1.388em;
-  block-size: 1.388em;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .decorated-zone::before {
@@ -72,8 +72,8 @@
   background: transparent;
   inset-inline-start: var(--decor-offset);
   inset-block-end: var(--decor-offset);
-  inline-size: 1.388em;
-  block-size: 1.388em;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .header__decor {
@@ -93,6 +93,10 @@
   border-radius: 50%;
   box-shadow: 0 0 4px 2px currentColor;
   background-color: currentColor;
+
+  /* Размеры декоративного красного шарика задал в относительных единицах,
+  чтобы при изменении размера шрифта размер шарика выглядел пропорционально */
+
   inline-size: 0.5em;
   block-size: 0.5em;
 }
